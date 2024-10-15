@@ -69,6 +69,35 @@ public class Basics {
         System.out.println(intValue);
         // prefix:
         System.out.println(++ intValue);
+
+        // better way to make string? use a builder
+        // check notes below
+        // is this the point of this "block"?
+        var sb = new StringBuilder("Welcome There.");
+        sb.append(" Howdy There.");
+        var st = sb.toString();
+        System.out.println(st);
+
+        // idk the ide refactored to this
+        var st2 = "Welcome There." + " Howdy There.";
+        System.out.println(st2);
+
+        // convert primitive to strings
+        int eggs = 20 + 20;
+        String answer = "Answer: " + eggs;
+        System.out.println(answer);
+
+        int intValueTwo = 42;
+        var fromInt = Integer.toString(intValueTwo);
+        System.out.println(fromInt);
+
+        boolean boolValue = true;
+        var fromBool = Boolean.toString(boolValue);
+        System.out.println(fromBool);
+
+        long longerValue = 10_000_000;
+        var fromLong = Long.toString(longerValue);
+        System.out.println(fromLong);
     }
 
 }
@@ -122,5 +151,8 @@ public class Basics {
 // round a number to two decimals
 // return Math.round(doubleValue * 100) / 100d;
 
-// chapter 4 video 1
+// BUILDER
+// software design pattern to build objects
+
+
 // finish this file until 5. Manage Flow then create new package
